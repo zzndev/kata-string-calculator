@@ -19,4 +19,10 @@ describe("String Calculator", () => {
         expect(stringCalculator('2, 3, 5')).toBe(10);
     });
 
+    it("should accept both , and \\n as a delimiter.", () => {
+        expect(stringCalculator('1\n2')).toBe(3);
+        expect(stringCalculator('1\n2,3')).toBe(6);
+        expect(stringCalculator('1,2\n3')).toBe(6);
+    });
+    
 });

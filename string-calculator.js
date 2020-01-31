@@ -1,5 +1,5 @@
 function stringCalculator(str) {
-    let ary = str.split('');
+    let ary = str.split(/[\n,]+/);
     let sum = 0;
     ary.forEach(value => {
         sum += parseInt(value);
